@@ -1,21 +1,88 @@
-const soundMappings = {
-  'option1': document.getElementById('sound1'),
-  'option2': document.getElementById('sound2'),
-  'option3': document.getElementById('sound3')
-};
+<!DOCTYPE html>
+<html>
 
-const imageSelector = document.getElementById('imageSelector');
+</body>
+  <audio id="sound1" src="loud.mp3"></audio>
+  <audio id="sound2" src="loud.mp3"></audio>
+  <audio id="sound3" src="loud.mp3"></audio>
+  <script>
 
-imageSelector.addEventListener('change', () => {
-  // ... (code to play sound based on selected value)
-});
+        }
+      });
+      // (Rest of the code to handle image changes based on dropdown value, same as previous example)
+  </script>
+</body>
 
-imageSelector.addEventListener('change', () => {
-  const selectedValue = imageSelector.value;
-  const sound = soundMappings[selectedValue];
+<head>
 
-  if (sound) {
-    sound.play();
-  }
-});
-});
+  <script>
+    const keyMappings = {
+      65: 'option1', // 'A' key
+      83: 'option2', // 'S' key
+      68: 'option3'  // 'D' key
+    };
+
+    document.addEventListener('keydown', (event) => {
+      const keycode = event.keyCode;
+      if (keyMappings[keycode]) {
+        const selectedValue = keyMappings[keycode];
+        const imageSelector = document.getElementById('imageSelector');
+        imageSelector.value = selectedValue;
+
+        // Trigger the image change event (this will update the image as well)
+        imageSelector.dispatchEvent(new Event('change'));
+      }
+    });
+
+      // (Rest of the code to handle image changes based on dropdown value, same as previous example)
+  </script>
+
+  </body>
+
+</html>
+
+<head>
+  <style>
+    /* Optional: Style the dropdown menu */
+    select {
+      width: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <select id="imageSelector">
+    <option value="option1">Crying</option>
+    <option value="option2">Suprised</option>
+    <option value="option3">Winking Face</option>
+  </select>
+  <img id="selectedImage" src="https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e9f79d6e63270becc761_52.png"
+    alt="Selected Image">
+  <script>const imageSelector = document.getElementById('imageSelector');
+    const selectedImage = document.getElementById('selectedImage');
+
+    imageSelector.addEventListener('change', () => {
+      const selectedValue = imageSelector.value;
+      let imageURL;
+
+
+      switch (selectedValue) {
+        case 'option1': imageURL = 'https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e5760608f3f68cb0b04b_93.png';
+          break;
+        case 'option2': imageURL = 'https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3eb0533090c8030cdab4e_29.png';
+          break;
+        case 'option3': imageURL = 'https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/64633915becdbd5e3e1168db_02.png';
+          break;
+        default: imageURL = 'https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3e9f79d6e63270becc761_52.png'; // Or set a placeholder image URL
+      }
+
+      selectedImage.src = imageURL;
+    });
+  </script>
+</body>
+
+</html>
