@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Interactive Image Icons</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* 4 columns */
+      gap: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon {
+      width: 100px;
+      /* Adjust as needed */
+      height: 100px;
+      /* Adjust as needed */
+      border-radius: 10px;
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      overflow: hidden;
+      /* Hide image overflow */
+    }
+
+    .icon:hover {
+      background-color: #ddd;
+    }
+
+    .icon img {
+      width: 100%;
+      /* Image fills the container */
+      height: 100%;
+      /* Image fills the container */
+      object-fit: cover;
+      /* Maintain aspect ratio and cover the area */
+    }
+
+    .icon.active {
+      background-color: #007bff;
+    }
+
+    .icon.active img {
+      opacity: 0.5;
+      /* Make the image slightly transparent when active */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="icon" onclick="toggleIcon(this); playSound('sound1')">
+      <img src="https://www.jocooks.com/wp-content/uploads/2020/03/white-bread-1-500x375.jpg" alt="Icon 1">
+      <audio id="sound1" src="r7slpCHAUz3S5RGQ4eBThYRqkp4iHN4BUL3P (1).mp3"></audio>
+      <script>
+        function toggleIcon(this) {
+          icon.this.toggle('active');
+        }
+        function playSound("sound1") {
+          const audio = document.getElementById("sound1");
+          audio.play("sound1");
+        }
+      </script>
+
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/66b3eb5b33090c8030cddfdb_25.png" alt="Icon 2">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="images.jpg" alt="Icon 3">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://m.media-amazon.com/images/I/71kD5iZ-DRL._AC_UF1000,1000_QL80_.jpg" alt="Icon 4">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4HIW_PnoyVgeDs8SZSEjB_ah55XBMzQTalg&s"
+        alt="Icon 5">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9mDfKTuon1B-vAll0VIjVLda7IuEFhjpwZQ&s"
+        alt="Icon 6">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGTRetVQkoEJVjw1MKT4b1ZGN0QWXixthACA&s"
+        alt="Icon 7">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvifsnBilH-TmMlVZQDnrWOdS7SbFHX95Dpw&s" alt="Icon 8">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShRj6Kn_QMfuQzW4skr9mca_P0z0ezV3I47g&s" alt="Icon 9">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpohbe5T5VNZfdA9dFSxhz0AMiwl7-P8xdjg&s" alt="Icon 10">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRngXq5pEmWAZpdMtlhpf88TR8aw08WVGOqPw&s" alt="Icon 11">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUup6RUtJpmhhRN1NrUwe6m7rk4vPf_M3KSQ&s" alt="Icon 12">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://via.placeholder.com/100" alt="Icon 13">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://via.placeholder.com/100" alt="Icon 14">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://via.placeholder.com/100" alt="Icon 15">
+    </div>
+    <div class="icon" onclick="toggleIcon(this)">
+      <img src="https://via.placeholder.com/100" alt="Icon 16">
+    </div>
+  </div>
+
+  <script>
+    function toggleIcon(icon) {
+      icon.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>
