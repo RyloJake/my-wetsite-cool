@@ -1,0 +1,17 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+footer nav li {
+  display: inline-block; /* Arrange links horizontally */
+  margin: 0 15px; /* Add space between links */
+}
+
+footer a {
+  text-decoration: none; /* Remove default underline */
+  color: #333; /* Choose a link color */
+  padding: 10px 15px; /* Add padding to the links */
+  background-color: #b0b0b0; /* Add a background color to the links */
+  border-radius: 5px; /* Round the corners of the links */
+}
